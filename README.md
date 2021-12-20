@@ -26,3 +26,7 @@ Check if the locale is working correctly by outputting the date on the command l
 ```bash
 $ echo $(LANG=la_VA date '+%A %d %B %Y %H:%M:%S')
 ```
+This should give an output similar to this:
+```
+Feria II 20 December 2021 05:03:35
+```
