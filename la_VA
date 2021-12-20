@@ -1,0 +1,183 @@
+comment_char %
+escape_char /
+
+% This file is part of the GNU C Library and contains locale data.
+% The Free Software Foundation does not claim any copyright interest
+% in the locale data contained in this file.  The foregoing does not
+% affect the license of the GNU C Library as a whole.  It does not
+% exempt you from the conditions of the license if your use would
+% otherwise be governed by that license.
+
+% Latin Language Locale for the Holy See (Vatican)
+% Source:  https://www.iso.org/obp/ui/#iso:code:3166:VA
+% Address: Via Urbisaglia 2
+%          00183 Roma, Italia
+% Contact: John D'Orazio
+% Email:   priest@johnromanodorazio.com
+% Tel:     
+% Fax:     
+% Language:  la
+% Territory: VA
+% Revision:  1.0
+% Date:      2021-12-20
+% Users:     general
+
+LC_IDENTIFICATION
+title      "Latin Language locale for the Holy See (Vatican)"
+source     "https://www.iso.org/obp/ui/#iso:code:3166:VA"
+address    "Via Urbisaglia 2, 00183 Roma Italia"
+contact    "John D'Orazio"
+email      "bug-glibc-locales@gnu.org"
+tel        ""
+fax        ""
+language   "Latin"
+territory  "Holy See (the)"
+revision   "1.0"
+date       "2021-12-20"
+
+category "i18n:2012";LC_IDENTIFICATION
+category "i18n:2012";LC_CTYPE
+category "i18n:2012";LC_COLLATE
+category "i18n:2012";LC_TIME
+category "i18n:2012";LC_NUMERIC
+category "i18n:2012";LC_MONETARY
+category "i18n:2012";LC_MESSAGES
+category "i18n:2012";LC_PAPER
+category "i18n:2012";LC_NAME
+category "i18n:2012";LC_ADDRESS
+category "i18n:2012";LC_TELEPHONE
+category "i18n:2012";LC_MEASUREMENT
+END LC_IDENTIFICATION
+
+LC_CTYPE
+copy "i18n"
+
+translit_start
+include "translit_combining";""
+% Latin ligatures.
+% LATIN CAPITAL LETTER A FOLLOWED BY CAPITAL LETTER E.
+<U00C6> "Æ";"AE"
+% LATIN SMALL LETTER A FOLLOWED BE SMALL LETTER E.
+<U00E6> "æ";"ae"
+% LATIN CAPITAL LETTER O FOLLOWED BY CAPITAL LETTER E.
+<U0153> "Œ";"OE"
+% LATIN SMALL LETTER O FOLLOWED BY SMALL LETTER E.
+<U0153> "œ";"oe"
+translit_end
+END LC_CTYPE
+
+LC_COLLATE
+copy "iso14651_t1"
+END LC_COLLATE
+
+LC_TIME
+abday   "Dom";/
+        "Fer II";/
+        "Fer III";/
+        "Fer IV";/
+        "Fer V";/
+        "Fer VI";/
+        "Sab"
+day     "Dominica";/
+        "Feria II";/
+        "Feria III";/
+        "Feria IV";/
+        "Feria V";/
+        "Feria VI";/
+        "Sabbatum"
+abmon   "Ian";/
+        "Feb";/
+        "Mar";/
+        "Apr";/
+        "Mai";/
+        "Iun";/
+        "Iul";/
+        "Aug";/
+        "Sep";/
+        "Oct";/
+        "Nov";/
+        "Dec"
+mon     "Ianuarius";/
+        "Februarius";/
+        "Martius";/
+        "Aprilis";/
+        "Maius";/
+        "Iunius";/
+        "Iulius";/
+        "Augustus";/
+        "September";/
+        "October";/
+        "November";/
+        "December"
+d_t_fmt "%A %-d %b %Y, %T"
+d_fmt   "%d//%m//%Y"
+t_fmt   "%T"
+am_pm   "";""
+t_fmt_ampm ""
+date_fmt   "%a %-d %b %Y, %T, %Z"
+week 7;19971130;4
+first_weekday 2
+END LC_TIME
+
+LC_NUMERIC
+decimal_point             ","
+thousands_sep             "."
+grouping                  3;3
+END LC_NUMERIC
+
+LC_MONETARY
+int_curr_symbol           "EUR "
+currency_symbol           "<U20AC>"
+mon_decimal_point         ","
+mon_thousands_sep         "."
+mon_grouping              3;3
+positive_sign             ""
+negative_sign             "-"
+int_frac_digits           2
+frac_digits               2
+p_cs_precedes             1
+p_sep_by_space            1
+n_cs_precedes             1
+n_sep_by_space            1
+p_sign_posn               1
+n_sign_posn               1
+END LC_MONETARY
+
+LC_MESSAGES
+yesexpr "^[+1yYsS]"
+noexpr  "^[-0nN]"
+yesstr  "sic"
+nostr   "non"
+END LC_MESSAGES
+
+LC_PAPER
+copy "i18n"
+END LC_PAPER
+
+LC_NAME
+name_fmt     "%s%t%g%t%m%t%f"
+END LC_NAME
+
+LC_ADDRESS
+postal_fmt   "%d%N%z %c%N"
+country_name "Città del Vaticano"
+country_ab2  "VA"
+country_ab3  "VAT"
+country_num  336
+country_isbn "978-88,979-12"
+country_car  "V"
+lang_name    "latin"
+lang_ab      "la"
+lang_term    "lat"
+lang_lib     "lat"
+END LC_ADDRESS
+
+LC_TELEPHONE
+tel_int_fmt    "+%c %a %l"
+int_prefix     "379"
+int_select     "00"
+END LC_TELEPHONE
+
+LC_MEASUREMENT
+copy "i18n"
+END LC_MEASUREMENT
